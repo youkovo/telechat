@@ -389,11 +389,11 @@ def get_robot(chat_id = None):
 
     return robot, role, api_key, api_url
 
-whitelist = os.environ.get('whitelist', None)
-if whitelist == "":
-    whitelist = None
-if whitelist:
-    whitelist = [id for id in whitelist.split(",")]
+WHITE_LIST = os.environ.get('WHITE_LIST', None)
+if WHITE_LIST == "":
+    WHITE_LIST = None
+if WHITE_LIST:
+    WHITE_LIST = [id for id in WHITE_LIST.split(",")]
 
 BLACK_LIST = os.environ.get('BLACK_LIST', None)
 if BLACK_LIST == "":
